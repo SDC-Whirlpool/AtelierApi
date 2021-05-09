@@ -14,8 +14,8 @@ function initModels(sequelize) {
   characteristics.hasMany(reviewchars, { as: "reviewchars", foreignKey: "char_id"});
   reviewchars.belongsTo(reviews, { as: "review", foreignKey: "review_id"});
   reviews.hasMany(reviewchars, { as: "reviewchars", foreignKey: "review_id"});
-  reviewphotos.belongsTo(reviews);
-  reviews.hasMany(reviewphotos);
+  reviewphotos.belongsTo(reviews, { as: "reviews", foreignKey: "review_id"});
+  reviews.hasMany(reviewphotos, { as: "reviewphotos", foreignKey: "review_id"});
 
   return {
     characteristics,
