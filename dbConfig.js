@@ -13,3 +13,5 @@ const db = new Sequelize('sdc', 'postgres', '', {
 });
 
 module.exports = db;
+
+/** ! */
