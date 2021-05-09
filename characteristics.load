@@ -1,0 +1,6 @@
+LOAD CSV
+  FROM /Users/ambermorris/Downloads/Characteristics.csv (id, product_id, name)
+  INTO postgresql:///sdc?sdctables.characteristics (id, product_id, name)
+
+  WITH
+  fields terminated by ',';

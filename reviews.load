@@ -1,0 +1,6 @@
+LOAD CSV
+  FROM /Users/ambermorris/Desktop/HR/SDC/noScrubs.csv (id, product_id, rating, date, summary, body, recommend, reported, reviewer_name, reviewer_email, response, helpfulness)
+  INTO postgresql:///sdc?sdctables.reviews (id, product_id, rating, date, summary, body, recommend, reported, reviewer_name, reviewer_email, response, helpfulness)
+
+  WITH
+  fields terminated by ',';

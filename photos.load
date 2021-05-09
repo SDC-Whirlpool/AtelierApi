@@ -1,0 +1,6 @@
+LOAD CSV
+  FROM /Users/ambermorris/Desktop/reviews_photos.csv (id, review_id, url)
+  INTO postgresql:///sdc?sdctables.reviewphotos (id, review_id, url)
+
+  WITH
+  fields terminated by ',';
